@@ -1,0 +1,23 @@
+Issues solve in android terminal 
+1.) You can't run execute in /storage/emulated/0/ anywhere because it mounted like that
+
+Solution : don't try to execute bash scripts just use  " sh (filename) " 
+
+Android contain no bash only mksh which is very basic
+
+If you are writing terminal app how do you set $HOME VARIABLE.   $OTHER VARIABLES
+
+Use text file  ( inside -> HOME=/data/data/your-app).  Now load it with terminal command ( source filename) 
+Source command run any file in current terminal session so it sets home and other parameter
+
+
+Demo c program
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	
+system("source libs/hi && cd /data/data/com.op && sh ");
+	
+}
